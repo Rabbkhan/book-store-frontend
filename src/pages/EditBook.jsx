@@ -15,7 +15,7 @@ const{id}= useParams();
 
 useEffect(()=>{
 setLoading(true);
-axios.get(`http://localhost:5555/books/${id}`)
+axios.get(`https://book-store-r2jk.onrender.com/books/${id}`)
   .then((response)=>{
     setAuthor(response.data.author);
     setPublishYear(response.data.publishYear);
@@ -38,7 +38,7 @@ const handleUpdateBook = () =>{
   }
   setLoading(true);
 
-  axios.put(`http://localhost:5555/books/${id}`,data)
+  axios.put(`https://book-store-r2jk.onrender.com/books/${id}`,data)
   .then(()=>{
     setLoading(false);
     navigate('/')

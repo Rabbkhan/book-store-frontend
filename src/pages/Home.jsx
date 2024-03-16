@@ -15,7 +15,7 @@ const [showType, setShowType] = useState('table')
   useEffect(()=>{
 setLoading(true);
 
-axios.get('http://localhost:5555/books')
+axios.get('https://book-store-r2jk.onrender.com/books')
 .then((response) =>{
   setBooks(response.data.data);
   setLoading(false);

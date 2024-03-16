@@ -10,7 +10,7 @@ const{id} = useParams()
 
 const handleDeleteBook= ()=>{
   setLoading(true);
-  axios.delete(`http://localhost:5555/books/${id}`)
+  axios.delete(`https://book-store-r2jk.onrender.com/books/${id}`)
   .then(()=>{
     setLoading(false);
     navigate('/')
